@@ -7,7 +7,7 @@ const Button = ({inputString, inputFunc}) => {
 
   const element = (
     <div>
-      <button onClick={inputFunc}>{inputString}</button>
+      <button onClick={inputFunc} onKeyDown={inputFunc}>{inputString}</button>
     </div>
   );
 
@@ -47,6 +47,15 @@ class GoldenAcornApp extends React.Component {
     null;
   };
 
+  componentDidMount () {
+    window.addEventListener('keydown', (event) => 
+      {event.keyCode === 38 ? 
+        this.buyOne() : 
+      event.keyCode === 40 ? 
+        this.eatOne() : 
+      null});
+  };
+
   render() {
     return (
       <div>
@@ -61,3 +70,15 @@ class GoldenAcornApp extends React.Component {
 ReactDOM.render(
   <GoldenAcornApp />, document.getElementById('root')
 );
+
+
+/*  let dog = {
+   sound: 'woof',
+   talk: function() {console.log(this.sound)}
+ };
+
+ dog.talk()
+
+ let bark = dog.talk
+
+ bark() */
