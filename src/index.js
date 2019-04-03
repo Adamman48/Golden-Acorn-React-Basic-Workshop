@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 
 const Button = ({inputString, inputFunc}) => {
   return (
-    <button onClick={inputFunc} >{inputString}</button>
+    <button onClick={inputFunc}>{inputString}</button>
   );
 };
 
