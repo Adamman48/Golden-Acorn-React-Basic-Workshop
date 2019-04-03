@@ -4,24 +4,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 const Button = ({inputString, inputFunc}) => {
-
-  const element = (
+  return (
     <div>
       <button onClick={inputFunc} onKeyDown={inputFunc}>{inputString}</button>
-    </div>
-  );
-
-  return element; 
+    </div>);
 };
 
-const Display = ({inputNum}) => {
-  const element = (
+const Display = (props) => {
+  return (
     <div>
-      <h1>{inputNum}</h1>
+      {props.children}
     </div>
   );
-
-  return element;
 };
 
 class GoldenAcornApp extends React.Component {
@@ -60,25 +54,15 @@ class GoldenAcornApp extends React.Component {
     return (
       <div>
       <Button inputString={'Buy one'} inputFunc={this.buyOne}/>
-      <Display inputNum={this.state.counter}/>
+      <Display>
+        <h1>{this.state.counter}</h1>
+      </Display>
       <Button inputString={'Eat one'} inputFunc={this.eatOne}/>
       </div>
     );
-  }
+  };
 };
  
 ReactDOM.render(
   <GoldenAcornApp />, document.getElementById('root')
 );
-
-
-/*  let dog = {
-   sound: 'woof',
-   talk: function() {console.log(this.sound)}
- };
-
- dog.talk()
-
- let bark = dog.talk
-
- bark() */
