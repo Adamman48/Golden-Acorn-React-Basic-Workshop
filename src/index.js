@@ -30,7 +30,7 @@ class GoldenAcornApp extends React.Component {
     super(props);
     this.state = {counter: 0};
     this.buyOne = this.buyOne.bind(this);
-    this.eatOne = this.eatOne.bind(this); /* EZ mi? */
+    this.eatOne = this.eatOne.bind(this);
   };
 
   buyOne () {
@@ -40,9 +40,11 @@ class GoldenAcornApp extends React.Component {
   };
 
   eatOne () {
-    this.setState({
-      counter: this.state.counter - 1
-    });
+    this.state.counter > 0 ?
+      this.setState({
+        counter: this.state.counter - 1
+      }) :
+    null;
   };
 
   render() {
