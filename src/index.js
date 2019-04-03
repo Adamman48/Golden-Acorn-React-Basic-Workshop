@@ -5,15 +5,14 @@ import ReactDOM from 'react-dom';
 
 const Button = ({inputString, inputFunc}) => {
   return (
-    <div>
-      <button onClick={inputFunc} onKeyDown={inputFunc}>{inputString}</button>
-    </div>);
+    <button onClick={inputFunc} >{inputString}</button>
+  );
 };
 
-const Display = (props) => {
+const Display = ({children}) => {
   return (
     <div>
-      {props.children}
+      {children}
     </div>
   );
 };
@@ -25,6 +24,7 @@ class GoldenAcornApp extends React.Component {
     this.state = {counter: 0};
     this.buyOne = this.buyOne.bind(this);
     this.eatOne = this.eatOne.bind(this);
+    this.keyBindingCounter = this.keyBindingCounter.bind(this);
   };
 
   buyOne () {
@@ -35,19 +35,22 @@ class GoldenAcornApp extends React.Component {
 
   eatOne () {
     this.state.counter > 0 ?
-      this.setState({
-        counter: this.state.counter - 1
+      this.setState(previousState => {
+        return {counter: previousState.counter - 1};
       }) :
     null;
   };
 
-  componentDidMount () {
-    window.addEventListener('keydown', (event) => 
-      {event.keyCode === 38 ? 
+  keyBindingCounter (event) {
+    event.keyCode === 38 ? 
         this.buyOne() : 
       event.keyCode === 40 ? 
         this.eatOne() : 
-      null});
+      null
+  };
+
+  componentDidMount () {
+    window.addEventListener('keydown', this.keyBindingCounter);
   };
 
   render() {
