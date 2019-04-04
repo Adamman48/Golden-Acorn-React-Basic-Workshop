@@ -2,6 +2,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+const { Component } = require ('react');
 
 const Button = ({inputString, inputFunc}) => {
   return (
@@ -17,7 +18,7 @@ const Display = ({children}) => {
   );
 };
 
-class GoldenAcornApp extends React.Component {
+class GoldenAcornApp extends Component {
 
   constructor(props) {
     super(props);
@@ -65,7 +66,7 @@ class GoldenAcornApp extends React.Component {
     );
   };
 };
- 
+
 ReactDOM.render(
   <GoldenAcornApp />, document.getElementById('root')
 );
