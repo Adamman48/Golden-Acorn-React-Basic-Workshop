@@ -10,17 +10,15 @@ const acorns = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_ACORN':
       return Object.assign({}, state, {
-        ...state,
-        acornCount: state.acornCount + action.incrementBy
+        acornCount: state.acornCount + action.value
       });
     case 'SUBTRACT_ACORN':
       return Object.assign({}, state, {
-        ...state,
-        acornCount: state.acornCount - action.decrementBy
+        acornCount: state.acornCount - action.value
       });
     default:
       return state;
   };
 };
 
-export { acorns };
+export default acorns;

@@ -1,18 +1,18 @@
 'use strict';
 
 import Button from '../../components/button';
-import eatAcorn from '../../actions';
+import { eatAcorn } from '../../actions';
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state) => {
   return {
-    inputString: state.eat
+    inputString: state.acorns.eat
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    inputFunc: dispatch(eatAcorn(1))
+    inputFunc: () => {dispatch(eatAcorn(1))}
   };
 };
 

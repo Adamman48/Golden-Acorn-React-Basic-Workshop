@@ -6,13 +6,13 @@ import EatAcorn from './containers/EatAcorn/index';
 import DisplayAcorn from './containers/DisplayAcorn/index';
 
 const App = (props) => (
-  <main>
+  <div>
     <BuyAcorn />
-    <DisplayAcorn>
-      <h1>{DisplayAcorn}</h1>
-    <DisplayAcorn/>
+      <DisplayAcorn>
+        <h1></h1>
+      </DisplayAcorn>
     <EatAcorn />
-  </main>
+  </div>
 );
 
 export default App;

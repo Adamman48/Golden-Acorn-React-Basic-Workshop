@@ -2,17 +2,18 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import GoldenAcornApp from './components/GoldenAcornApp';
-/* import App from './App';
-import AcornStorage from './store';
+import { Provider } from 'react-redux';
+/* import GoldenAcornApp from './components/GoldenAcornApp'; */
+import App from './App';
+import acornStorage from './store';
 
 ReactDOM.render(
-  <Provider store={AcornStorage}>
+  <Provider store={acornStorage}>
     <App />
   </Provider>, 
   document.getElementById('root')
-); */
-
-ReactDOM.render(
-  <GoldenAcornApp />, document.getElementById('root')
 );
+
+/* ReactDOM.render(
+  <GoldenAcornApp />, document.getElementById('root')
+); */
