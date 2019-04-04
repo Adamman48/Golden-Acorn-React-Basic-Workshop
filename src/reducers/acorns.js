@@ -5,9 +5,20 @@ const initialState = {
 };
 
 const acorns = (state = initialState, action) => {
-  typeof state === undefined ?
-    initialState :
-  null
+  switch (action.type) {
+    case 'ADD_ACORN':
+      return Object.assign({}, state, {
+        ...state,
+        acorns: action.input 
+      });
+    case 'SUBTRACT_ACORN':
+      return Object.assign({}, state, {
+        ...state,
+        acorns: action.input
+      });
+    default:
+      return state;
+  };
 };
 
 export { acorns };
