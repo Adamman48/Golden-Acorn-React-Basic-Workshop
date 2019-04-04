@@ -9,7 +9,7 @@ const App = (props) => (
   <div>
     <BuyAcorn />
       <DisplayAcorn>
-        <h1></h1>
+        <h1>{console.log(props)}</h1>
       </DisplayAcorn>
     <EatAcorn />
   </div>

@@ -1,16 +1,16 @@
 'use strict';
 
-function buyAcorn (incrementBy) {
+function buyAcorn (inputValue) {
   return {
     type: 'ADD_ACORN',
-    value: incrementBy
+    incrementBy: inputValue
   };       
 };
 
-function eatAcorn (decrementBy) {
+function eatAcorn (inputValue) {
   return {
     type: 'SUBTRACT_ACORN',
-    value: decrementBy
+    decrementBy: inputValue
   };
 };
 

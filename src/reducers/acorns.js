@@ -10,11 +10,15 @@ const acorns = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_ACORN':
       return Object.assign({}, state, {
-        acornCount: state.acornCount + action.value
+        ...state,
+        acornCount: state.acornCount + action.incrementBy
       });
     case 'SUBTRACT_ACORN':
       return Object.assign({}, state, {
-        acornCount: state.acornCount - action.value
+        ...state,
+        acornCount: state.acornCount > 0 ?
+          state.acornCount - action.decrementBy : 
+        initialState.acornCount
       });
     default:
       return state;

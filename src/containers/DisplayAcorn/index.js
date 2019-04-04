@@ -4,9 +4,8 @@ import Display from '../../components/display';
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state) => {
-  console.log(state)
   return {
-    amount: state.acorns.acornCount
+    children: state.acorns.acornCount
   };
 };
 
