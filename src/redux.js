@@ -1,16 +1,16 @@
 'use strict';
 
-function buyAcorn (callBack) {
+function buyAcorn (input) {
   return {
     type: 'ADD_ACORN',
-    callBack
+    input
   };
 };
 
-function eatAcorn (callBack) {
+function eatAcorn (input) {
   return {
     type: 'SUBTRACT_ACORN',
-    callBack
+    input
   };
 };
 
