@@ -1,7 +1,7 @@
 'use strict';
 
 const initialState = {
-  acorns: 0
+  acornCount: 0
 };
 
 const acorns = (state = initialState, action) => {
@@ -9,12 +9,12 @@ const acorns = (state = initialState, action) => {
     case 'ADD_ACORN':
       return Object.assign({}, state, {
         ...state,
-        acorns: state.acorns + action.input
+        acornCount: state.acornCount + action.incrementBy
       });
     case 'SUBTRACT_ACORN':
       return Object.assign({}, state, {
         ...state,
-        acorns: action.input(state.acorns)
+        acornCount: state.acornCount - action.decrementBy
       });
     default:
       return state;
