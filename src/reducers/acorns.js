@@ -9,12 +9,12 @@ const acorns = (state = initialState, action) => {
     case 'ADD_ACORN':
       return Object.assign({}, state, {
         ...state,
-        acorns: action.input 
+        acorns: action.input(state.acorns) 
       });
     case 'SUBTRACT_ACORN':
       return Object.assign({}, state, {
         ...state,
-        acorns: action.input
+        acorns: action.input(state.acorns)
       });
     default:
       return state;
