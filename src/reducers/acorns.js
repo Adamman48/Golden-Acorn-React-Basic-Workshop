@@ -1,7 +1,9 @@
 'use strict';
 
 const initialState = {
-  acornCount: 0
+  acornCount: 0,
+  buy: 'Buy one',
+  eat: 'Eat one'
 };
 
 const acorns = (state = initialState, action) => {

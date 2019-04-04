@@ -13,3 +13,5 @@ function eatAcorn (decrementBy) {
     decrementBy  // vice-versa
   };
 };
+
+export default { buyAcorn, eatAcorn };
