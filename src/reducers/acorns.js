@@ -16,7 +16,7 @@ const acorns = (state = initialState, action) => {
     case 'SUBTRACT_ACORN':
       return Object.assign({}, state, {
         ...state,
-        acornCount: state.acornCount > 0 ?
+        acornCount: state.acornCount > 0 ? // OK like this?
           state.acornCount - action.decrementBy : 
         initialState.acornCount
       });

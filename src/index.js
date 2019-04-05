@@ -4,12 +4,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 /* import GoldenAcornApp from './components/GoldenAcornApp'; */
-import App from './App';
+import AppWrapper from './containers/AppWrapper';
 import acornStorage from './store';
 
 ReactDOM.render(
   <Provider store={acornStorage}>
-    <App />
+    <AppWrapper />
   </Provider>, 
   document.getElementById('root')
 );

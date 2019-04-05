@@ -5,14 +5,14 @@ import BuyAcorn from './containers/BuyAcorn/index';
 import EatAcorn from './containers/EatAcorn/index';
 import DisplayAcorn from './containers/DisplayAcorn/index';
 
-const App = (props) => (
-  <div>
+const App = ({displayCount}) => (
+  <main>
     <BuyAcorn />
       <DisplayAcorn>
-        <h1>{console.log(props)}</h1>
+        <h1>{displayCount}</h1>
       </DisplayAcorn>
     <EatAcorn />
-  </div>
+  </main>
 );
 
 export default App;
