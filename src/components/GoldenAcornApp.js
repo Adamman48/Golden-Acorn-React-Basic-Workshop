@@ -41,6 +41,10 @@ class GoldenAcornApp extends Component {
     window.addEventListener('keydown', this.keyBindingCounter);
   };
 
+  componentWillUnmount () {
+    window.removeEventListener('keydown', this.keyBindingCounter);
+  };
+
   render() {
     return (
       <div>
