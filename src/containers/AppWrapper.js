@@ -23,7 +23,7 @@ const mapStateToProps = (state) => {
 
 const AppWrapper = connect(
   mapStateToProps,
-  keyBinding
+  keyBinding() // with simple callback it throws minor error, runtime not affected. If I send it as a function, error is gone
 )(App);
 
 export default AppWrapper;
