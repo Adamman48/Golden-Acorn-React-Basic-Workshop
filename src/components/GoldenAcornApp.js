@@ -44,9 +44,10 @@ class GoldenAcornApp extends Component {
   render() {
     return (
       <div>
+      <h1>Golden Acorn Application With States</h1>
       <Button inputString={'Buy one'} inputFunc={this.buyOne}/>
       <Display>
-        <h1>{this.state.counter}</h1>
+        <h2>{this.state.counter}</h2>
       </Display>
       <Button inputString={'Eat one'} inputFunc={this.eatOne}/>
       </div>

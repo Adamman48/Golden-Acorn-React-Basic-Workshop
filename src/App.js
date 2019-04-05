@@ -7,9 +7,10 @@ import DisplayAcorn from './containers/DisplayAcorn/index';
 
 const App = ({displayCount}) => (
   <main>
+    <h1>Golden Acorn Application With Redux</h1>
     <BuyAcorn />
       <DisplayAcorn>
-        <h1>{displayCount}</h1>
+        <h2>{displayCount}</h2>
       </DisplayAcorn>
     <EatAcorn />
   </main>
