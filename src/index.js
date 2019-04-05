@@ -13,16 +13,14 @@ import Home from './components/home';
 
 ReactDOM.render(
   <BrowserRouter>
-    <div>
     <Provider store={acornStorage}>
-    <NavBar />
-      <Switch>
-        <Route exct path='/' component={Home}></Route>
-        <Route path='/simple/redux' component={AppWrapper} />
-        <Route path='/simple/states' component={GoldenAcornApp} />
-      </Switch>
+      <NavBar />
+        <Switch>
+          <Route path='/' component={Home} exact></Route>
+          <Route path='/simple/redux' component={AppWrapper} />
+          <Route path='/simple/states' component={GoldenAcornApp} />
+        </Switch>
     </Provider>
-    </div>
   </BrowserRouter>, 
   document.getElementById('root')
 );
