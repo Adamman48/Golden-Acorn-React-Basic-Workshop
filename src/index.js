@@ -16,7 +16,7 @@ ReactDOM.render(
     <Provider store={acornStorage}>
       <NavBar />
         <Switch>
-          <Route path='/' component={Home} exact></Route>
+          <Route path='/' component={Home} exact />
           <Route path='/simple/redux' component={AppWrapper} />
           <Route path='/simple/states' component={GoldenAcornApp} />
         </Switch>
