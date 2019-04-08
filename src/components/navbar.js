@@ -6,8 +6,8 @@ import { NavLink } from 'react-router-dom';
 const NavBar = () => {
   return (
     <div>
-      <NavLink to='/'>Home&#x1f330;</NavLink>
-      <NavLink to='/simple/redux'>With Redux&#x1f330;</NavLink>
+      <NavLink to='/'>Home</NavLink> <br/>
+      <NavLink to='/simple/redux'>With Redux</NavLink> <br/>
       <NavLink to='/simple/states'>With states</NavLink>
     </div>
   );
