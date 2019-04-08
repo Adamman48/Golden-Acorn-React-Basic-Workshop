@@ -2,7 +2,7 @@
 
 import React from 'react';
 import acornStorage from '../store';
-import { buyAcorn, eatAcorn }from '../actions'; 
+import { buyAcorn, eatAcorn }from '../actions/actions'; 
 
 class KeyPress extends React.Component {
   constructor(props) {

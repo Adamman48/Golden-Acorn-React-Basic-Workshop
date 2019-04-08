@@ -1,8 +1,8 @@
 'use strict';
 
 import React from 'react';
-import Button from './button';
-import Display from './display';
+import Button from './Button';
+import Display from './Display';
 const { Component } = require ('react');
 
 class GoldenAcornApp extends Component {
@@ -22,11 +22,9 @@ class GoldenAcornApp extends Component {
   };
 
   eatOne () {
-    this.state.counter > 0 ?
       this.setState(previousState => {
-        return {counter: previousState.counter - 1};
-      }) :
-    null;
+        return {counter: Math.max(previousState.counter - 1, 0)};
+      });
   };
 
   keyBindingCounter (event) {
