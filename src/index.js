@@ -7,8 +7,8 @@ import { Provider } from 'react-redux';
 import GoldenAcornApp from './components/GoldenAcornApp';
 import AppWrapper from './containers/AppWrapper';
 import acornStorage from './store';
-import NavBar from './components/navbar';
-import Home from './components/home';
+import NavBar from './components/Navbar';
+import Home from './components/Home';
 
 ReactDOM.render(
   <BrowserRouter>

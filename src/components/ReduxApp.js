@@ -1,10 +1,10 @@
 'use strict';
 
 import React from 'react';
-import BuyAcorn from './containers/BuyAcorn';
-import EatAcorn from './containers/EatAcorn';
-import DisplayAcorn from './containers/DisplayAcorn';
-import KeyPress from './components/Keypress';
+import BuyAcorn from '../containers/BuyAcorn';
+import EatAcorn from '../containers/EatAcorn';
+import DisplayAcorn from '../containers/DisplayAcorn';
+import KeyPress from '../components/Keypress';
 /* import Display from './components/display'; // could use this instead DisplayAcorn, does the same thing */
 
 const App = ({displayCount}) => (

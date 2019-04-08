@@ -1,6 +1,6 @@
 'use strict';
 
-import Display from '../../components/display';
+import Display from '../components/Display';
 import { connect } from 'react-redux';
 
 const DisplayAcorn = connect(

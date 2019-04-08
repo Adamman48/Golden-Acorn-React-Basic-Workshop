@@ -1,6 +1,6 @@
 'use strict';
 
-import App from '../App';
+import ReduxApp from '../components/ReduxApp';
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state) => {
@@ -11,6 +11,6 @@ const mapStateToProps = (state) => {
 
 const AppWrapper = connect(
   mapStateToProps,
-)(App);
+)(ReduxApp);
 
 export default AppWrapper;
