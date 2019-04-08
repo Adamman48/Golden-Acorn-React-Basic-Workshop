@@ -51,7 +51,7 @@ class GoldenAcornApp extends Component {
       <h1>Golden Acorn Application With States</h1>
       <Button inputString={'Buy one'} inputFunc={this.buyOne}/>
       <Display>
-        <h2>{this.state.counter}</h2>
+        <h2>{this.state.counter} &#x1f330;</h2>
       </Display>
       <Button inputString={'Eat one'} inputFunc={this.eatOne}/>
       </div>
